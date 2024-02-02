@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidDomInspection -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".work.WorkAdd">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/WorkAddKeyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Key Photo"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toTopOf="@+id/WorkAddKeyInfoText"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/workAddDashText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Dash Photo"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toTopOf="@+id/workAddDashInfoText"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/workAddExtraText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extra Photos"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toTopOf="@+id/workAddExtraInfoText"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="246dp" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/WorkAddKeyPhoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:rotation="90"
+            android:src="@android:drawable/checkbox_off_background"
+            app:layout_constraintBottom_toBottomOf="@+id/WorkAddKeyInfoText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/WorkAddKeyText" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/WorkAddDashPhoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:rotation="90"
+            android:src="@android:drawable/checkbox_off_background"
+            app:layout_constraintBottom_toBottomOf="@+id/workAddDashInfoText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/workAddDashText" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/workAddExtraPhotos"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:rotation="90"
+            android:src="@android:drawable/checkbox_off_background"
+            app:layout_constraintBottom_toBottomOf="@+id/workAddExtraInfoText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/workAddExtraText" />
+
+        <TextView
+            android:id="@+id/WorkAddKeyInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="n/a"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/workAddDashText"
+            app:layout_constraintEnd_toStartOf="@+id/WorkAddKeyPhoto"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/workAddDashInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="n/a"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/workAddExtraText"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/workAddExtraInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="0"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:layout_marginBottom="5dp"
+            android:background="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/WorkAddKeyText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/workAddExtraEditText"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Enter extra here"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/workAddFloatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:src="@android:drawable/ic_menu_save"
+            app:layout_constraintBottom_toBottomOf="@+id/workAddExtraEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            android:importantForAccessibility="no"/>
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/workAddSurface"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/workAddExtraEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

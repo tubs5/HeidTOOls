@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/WorkBrowseListViewItemID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="CAR00"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/WorkBrowseListViewItemSerial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="SE00000"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toStartOf="@+id/WorkBrowseListViewItemPlate"
+        app:layout_constraintStart_toEndOf="@+id/WorkBrowseListViewItemID"
+        app:layout_constraintTop_toTopOf="@+id/WorkBrowseListViewItemID" />
+
+    <TextView
+        android:id="@+id/WorkBrowseListViewItemPlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="ABC123"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/WorkBrowseListViewItemSerial" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WorkBrowseListViewItemSerial" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

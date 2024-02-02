@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/boxInsetLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".stream.chat.ChatClient">
+
+
+    <Button
+        android:id="@+id/buttonScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wifiTExt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/wifiEditTExt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonScan"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/wifiEditTExt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textLongMessage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/wifiButtonSend"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/wifiButtonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wifiTExt" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

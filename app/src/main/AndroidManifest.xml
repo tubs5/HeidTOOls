@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.heid.heidtools">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity
+            android:name=".work.WorkMain"
+            android:exported="true"
+            android:label="@string/title_activity_work_main"
+            android:theme="@style/NoActionBar">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts"
+                android:resource="@xml/workappshortcuts"
+
+                />
+        </activity>
+        <activity
+            android:name=".stream.encode.CamStream"
+            android:exported="false" />
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true"
+            android:label="Heid Tools"
+            android:theme="@style/NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".stream.chat.ChatClient"
+            android:exported="true"
+            android:label="@string/title_activity_wifi"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".speedApp.speedDurationPicker" />
+        <activity
+            android:name=".speedApp.speedChartPlotter"
+            android:label="@string/title_activity_speed_chart_plotter"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".speedApp.SpeedhistoryActivity"
+            android:exported="true"
+            android:label="@string/title_activity_speedhistory">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MaxWeight.MaxWeightv2" />
+        <activity android:name=".MaxWeight.MaxWeight" />
+        <activity
+            android:name=".NoteCreator.NotCreator"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Notification Creator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".profile.LoginActivity"
+            android:finishOnTaskLaunch="true"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".profile.Profile" />
+        <activity
+            android:name=".speedApp.SpeedActivity"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Speed App">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".speedApp.SpeedActivity" />
+        </activity>
+
+        <service android:name=".speedApp.SpeedService" />
+        <service android:name=".stream.chat.ConnectionService" />
+
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="me.heid.heidtools.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <!-- ressource file to create -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+        </provider>
+
+
+
+
+
+
+
+
+
+
+
+    </application>
+
+</manifest>
